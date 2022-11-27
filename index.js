@@ -70,6 +70,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
     const channel = await interaction.guild.channels.fetch(`${channelId}`);
     const channelName = channel ? channel.name : "NO_CHANNEL_FOUND";
     await interaction.reply(`Must be run in ${channelName}`);
+    return;
   }
 
   try {
